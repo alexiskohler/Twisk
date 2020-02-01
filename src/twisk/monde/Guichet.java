@@ -1,10 +1,13 @@
 package twisk.monde;
 
+import twisk.outils.FabriqueNumero;
+
 import java.util.Objects;
 
 public class Guichet extends Etape {
 
     private int nbjetons;
+    private int semaphore;
 
     /**
      *
@@ -12,6 +15,7 @@ public class Guichet extends Etape {
      */
     public Guichet(String nom) {
         super(nom);
+        semaphore= FabriqueNumero.getInstance().getNumeroSemaphore();
     }
 
     /**
@@ -22,6 +26,7 @@ public class Guichet extends Etape {
     public Guichet(String nom, int nbjetons) {
         super(nom);
         this.nbjetons = nbjetons;
+        semaphore= FabriqueNumero.getInstance().getNumeroSemaphore();
     }
 
     /**
@@ -41,7 +46,8 @@ public class Guichet extends Etape {
     public String toString() {
         return "Guichet{" +
                 "nbjetons=" + nbjetons +
-                ", nom='" + nom;
+                ", nom='" + nom +
+                ", numero " + semaphore;
     }
 
     /**
@@ -54,6 +60,14 @@ public class Guichet extends Etape {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Guichet etapes = (Guichet) o;
-        return nbjetons == etapes.nbjetons;
+        return nbjetons == etapes.nbjetons && semaphore==etapes.semaphore;
+    }
+
+    public int getNbjetons() {
+        return nbjetons;
+    }
+
+    public int getSemaphore() {
+        return semaphore;
     }
 }

@@ -15,6 +15,9 @@ class FabriqueNumeroTest {
         assert(x.getNumeroEtape()==1):"x valeur invalide";
         assert(x.getNumeroEtape()==2):"y valeur invalide";
         assert(x.getNumeroEtape()==3):"z valeur invalide";
+        assert(x.getNumeroSemaphore()==1):"x valeur invalide";
+        assert(x.getNumeroSemaphore()==2):"y valeur invalide";
+        assert(x.getNumeroSemaphore()==3):"z valeur invalide";
     }
 
     @org.junit.jupiter.api.Test
@@ -22,5 +25,6 @@ class FabriqueNumeroTest {
         FabriqueNumero x= FabriqueNumero.getInstance();
         x.reset();
         assert(x.getNumeroEtape()==0):"x valeur invalide";
+        assert(x.getNumeroSemaphore()==1):"x valeur invalide";
     }
 }

@@ -7,7 +7,7 @@ import java.util.LinkedList;
 public abstract class Etape implements Iterable<Etape> {
 
     protected String nom;
-    private GestionnaireSuccesseurs gs;
+    protected GestionnaireSuccesseurs gs;
 
     public Etape(){
 
@@ -29,6 +29,10 @@ public abstract class Etape implements Iterable<Etape> {
     public void ajouterSuccesseur(Etape... e){
 
         gs.ajouter(e);
+    }
+
+    public int nbSuccesseur(){
+        return gs.nbEtapes();
     }
 
     /**

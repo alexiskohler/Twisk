@@ -66,4 +66,12 @@ public class Activite extends Etape{
         return temps == etapes.temps &&
                 ecartTemps == etapes.ecartTemps;
     }
+
+    public int getTemps() {
+        return temps;
+    }
+
+    public int getEcartTemps() {
+        return ecartTemps;
+    }
 }
