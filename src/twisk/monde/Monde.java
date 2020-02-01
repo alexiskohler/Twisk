@@ -17,8 +17,8 @@ public class Monde implements Iterable<Etape> {
     }
 
     /**
-     *
-     * @param etapes
+     * Définit une collection d'étapes comme entrées du monde
+     * @param etapes la collection d'étapes
      */
     public void aCommeEntree(Etape... etapes){
 
@@ -27,8 +27,8 @@ public class Monde implements Iterable<Etape> {
     }
 
     /**
-     *
-     * @param etapes
+     * Définit une collection d'étapes comme sorties du monde
+     * @param etapes la collection d'étapes
      */
     public void aCommeSortie(Etape... etapes){
 
@@ -37,8 +37,8 @@ public class Monde implements Iterable<Etape> {
     }
 
     /**
-     *
-     * @param etapes
+     * Ajoute une collection d'étapes au monde
+     * @param etapes la collection d'étapes
      */
     public void ajouter(Etape... etapes){
 
@@ -46,8 +46,8 @@ public class Monde implements Iterable<Etape> {
     }
 
     /**
-     *
-     * @return
+     * Retourne le nombre d'étapes dans le monde
+     * @return le nombre d'étapes dans le monde
      */
     public int nbEtapes(){
 
@@ -55,8 +55,8 @@ public class Monde implements Iterable<Etape> {
     }
 
     /**
-     *
-     * @return
+     * Retourne le nombre de guichet dans le monde
+     * @return le nombre de guichet dans le monde
      */
     public int nbGuichets(){
 
@@ -72,9 +72,18 @@ public class Monde implements Iterable<Etape> {
         return compteur;
     }
 
+    @Override
+    public String toString() {
+        return "Monde{" +
+                "ge=" + ge +
+                ", entree=" + entree +
+                ", sortie=" + sortie +
+                '}';
+    }
+
     /**
-     *
-     * @return
+     * Retourne l'itérateur des étapes du monde
+     * @return l'itérateur des étapes du monde
      */
     @Override
     public Iterator<Etape> iterator() {

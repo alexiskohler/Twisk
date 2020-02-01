@@ -40,10 +40,6 @@ public class Activite extends Etape{
         return true;
     }
 
-    /**
-     *
-     * @return
-     */
     @Override
     public String toString() {
         return "Activite{" +
@@ -54,9 +50,9 @@ public class Activite extends Etape{
     }
 
     /**
-     *
-     * @param o
-     * @return
+     * Retourne vrai si les deux activités sont égales, faux sinon
+     * @param o l'activité à comparer
+     * @return vrai si les deux activités sont égales, faux sinon
      */
     @Override
     public boolean equals(Object o) {
@@ -67,10 +63,18 @@ public class Activite extends Etape{
                 ecartTemps == etapes.ecartTemps;
     }
 
+    /**
+     * Retourne le temps de l'activité
+     * @return le temps de l'activité
+     */
     public int getTemps() {
         return temps;
     }
 
+    /**
+     * Retourne l'écart de temps de l'activité
+     * @return l'écart de temps de l'activité
+     */
     public int getEcartTemps() {
         return ecartTemps;
     }

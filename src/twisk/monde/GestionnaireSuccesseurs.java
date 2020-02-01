@@ -32,6 +32,13 @@ public class GestionnaireSuccesseurs implements Iterable<Etape> {
     }
 
     @Override
+    public String toString() {
+        return "GestionnaireSuccesseurs{" +
+                "lesEtapes=" + lesEtapes +
+                '}';
+    }
+
+    @Override
     public Iterator<Etape> iterator() {
         return lesEtapes.iterator();
     }

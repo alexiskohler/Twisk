@@ -30,9 +30,16 @@ public class GestionnaireEtapes implements Iterable<Etape> {
         return lesEtapes.size();
     }
 
+    @Override
+    public String toString() {
+        return "GestionnaireEtapes{" +
+                "lesEtapes=" + lesEtapes +
+                '}';
+    }
+
     /**
-     *
-     * @return
+     * Retourne l'itérateur des etapes
+     * @return l'itérateur des etapes
      */
     @Override
     public Iterator<Etape> iterator() {

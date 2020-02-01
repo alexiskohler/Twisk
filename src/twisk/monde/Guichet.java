@@ -10,38 +10,34 @@ public class Guichet extends Etape {
     private int semaphore;
 
     /**
-     *
-     * @param nom
+     * Construit un guichet avec un nom
+     * @param nom le nom du guichet
      */
     public Guichet(String nom) {
         super(nom);
-        semaphore= FabriqueNumero.getInstance().getNumeroSemaphore();
+        semaphore = FabriqueNumero.getInstance().getNumeroSemaphore();
     }
 
     /**
-     *
-     * @param nom
-     * @param nbjetons
+     * Construit un guichet avec un nom et nombre de jetons
+     * @param nom le nom du guichet
+     * @param nbjetons le nombre de jetons
      */
     public Guichet(String nom, int nbjetons) {
         super(nom);
         this.nbjetons = nbjetons;
-        semaphore= FabriqueNumero.getInstance().getNumeroSemaphore();
+        semaphore = FabriqueNumero.getInstance().getNumeroSemaphore();
     }
 
     /**
-     *
-     * @return
+     * Retourne vrai car cet objet est un guichet
+     * @return vrai car cet objet est un guichet
      */
     @Override
     public boolean estUnGuichet() {
         return true;
     }
 
-    /**
-     *
-     * @return
-     */
     @Override
     public String toString() {
         return "Guichet{" +
@@ -51,9 +47,9 @@ public class Guichet extends Etape {
     }
 
     /**
-     *
-     * @param o
-     * @return
+     * Retourne vrai si les deux guichets sont égaux, faux sinon
+     * @param o le guivhet à comparer
+     * @return vrai si les deux guichets sont égaux, faux sinon
      */
     @Override
     public boolean equals(Object o) {
@@ -63,10 +59,18 @@ public class Guichet extends Etape {
         return nbjetons == etapes.nbjetons && semaphore==etapes.semaphore;
     }
 
+    /**
+     * Retourne le nombre de jetons
+     * @return le nombre de jetons
+     */
     public int getNbjetons() {
         return nbjetons;
     }
 
+    /**
+     * Retourne le numéro de sémaphore
+     * @return le numéro de sémaphore
+     */
     public int getSemaphore() {
         return semaphore;
     }

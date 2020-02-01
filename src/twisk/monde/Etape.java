@@ -1,8 +1,6 @@
 package twisk.monde;
 
-import java.util.Collections;
 import java.util.Iterator;
-import java.util.LinkedList;
 
 public abstract class Etape implements Iterable<Etape> {
 
@@ -14,7 +12,7 @@ public abstract class Etape implements Iterable<Etape> {
     }
 
     /**
-     *
+     * Construit une etape avec un nom
      * @param nom
      */
     public Etape(String nom) {
